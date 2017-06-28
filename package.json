@@ -4,7 +4,7 @@
   "description": "",
   "main": "imdb.js",
   "scripts": {
-    "test": "mocha"
+    "test": "VCR_MODE=cache mocha"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "chai": "^4.0.2",
-    "mocha": "^3.4.2"
+    "mocha": "^3.4.2",
+    "sepia": "^2.0.2"
   }
 }
