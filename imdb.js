@@ -37,3 +37,7 @@ function run() {
 if (!module.parent) {
   run()
 }
+
+module.exports = {
+  queryIMDB
+}
