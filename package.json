@@ -4,7 +4,8 @@
   "description": "",
   "main": "imdb.js",
   "scripts": {
-    "test": "VCR_MODE=cache mocha"
+    "test": "VCR_MODE=playback mocha",
+    "test:record": "VCR_MODE=record mocha"
   },
   "author": "",
   "license": "ISC",

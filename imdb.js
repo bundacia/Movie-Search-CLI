@@ -3,10 +3,8 @@ const cheerio = require('cheerio')
 
 function queryIMDB(search, cb) {
   http.get({
-      hostname: 'www.imdb.com',
-      port: 80,
-      path: `/find?ref_=nv_sr_fn&q=${search}&s=all`,
-      agent: false  // create a new agent just for this one request
+    hostname: 'www.imdb.com',
+    path: `/find?ref_=nv_sr_fn&q=${search}&s=all`,
   }, (res) => {
     var html = ''
     res.on('data', (chunk) => { html += chunk; });
