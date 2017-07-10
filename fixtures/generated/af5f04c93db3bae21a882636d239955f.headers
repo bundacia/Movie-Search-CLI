@@ -1,7 +1,7 @@
 {
   "statusCode": 200,
   "headers": {
-    "date": "Wed, 28 Jun 2017 15:18:07 GMT",
+    "date": "Mon, 10 Jul 2017 14:35:07 GMT",
     "server": "Server",
     "x-frame-options": "SAMEORIGIN",
     "content-security-policy": "frame-ancestors 'self' imdb.com *.imdb.com *.media-imdb.com withoutabox.com *.withoutabox.com amazon.com *.amazon.com amazon.co.uk *.amazon.co.uk amazon.de *.amazon.de translate.google.com images.google.com www.google.com www.google.co.uk search.aol.com bing.com www.bing.com",
@@ -9,14 +9,14 @@
     "content-language": "en-US",
     "vary": "Accept-Encoding,User-Agent",
     "set-cookie": [
-      "uu=BCYqqJ-ShS8s8WGB9vDxAAR60lAFb6GlkHmYKD60IZrzJ6MZ1cIgWkRpAWag8qrj-YCosZjM_Fke%0D%0A4cH65WHbp6Phrx5h6FX3gc7tYAUWqPikhKzxQjy4MBcLG5FluHb3_K2vyshxaXszHN5uSEMQCkr0%0D%0AqQOuEJvfpU0BYC-AkiFUkrxWaU7uB-y87VVrzYUxS2vbKVUPMrzSWBU5PyYM2B010eS3p3sLyX32%0D%0ALiU0FilGDrir4iPrOa39Fy5BUW-Mmz_cLlsTZ0L9Qi5yn_THsVZcfUoJNEdZ1GXMYNtfE_ImdNI%0D%0A; Domain=.imdb.com; Expires=Mon, 16-Jul-2085 18:32:15 GMT; Path=/",
-      "session-id=131-4108433-4548824; Domain=.imdb.com; Expires=Mon, 16-Jul-2085 18:32:15 GMT; Path=/",
-      "session-id-time=2129383088; Domain=.imdb.com; Expires=Mon, 16-Jul-2085 18:32:15 GMT; Path=/"
+      "uu=BCYqH753CSWmsGVcCA4tDCp_8Vp0QQA3EkYxQXixt1Xm2K3_B0VoVzWgxXNxqgMbj_rD6JhP_w5p%0D%0ABeZQp4uOKWfkUjy-vrlb1Q5LxRubMV4UehDb3JM0THM5tJsoWzmYBk_PlkK_9o1eap1BWYOqPeRq%0D%0AMuq7jS7GPMEgevJ8SChUe8IEEEgrscSmlXiIZEJaRKMOJBgdQIOVlk6CUDvu0NfFXjWODEVYEicM%0D%0AebFEr4-UO5yxQsqeY67W4WK2k0TGmyI3MYeoKEEkjN8yCGGLLAldpAzd_VyhXYtOJauwH0CEyr8%0D%0A; Domain=.imdb.com; Expires=Sat, 28-Jul-2085 17:49:15 GMT; Path=/",
+      "session-id=130-7442359-6642232; Domain=.imdb.com; Expires=Sat, 28-Jul-2085 17:49:15 GMT; Path=/",
+      "session-id-time=2130417308; Domain=.imdb.com; Expires=Sat, 28-Jul-2085 17:49:15 GMT; Path=/"
     ],
     "p3p": "policyref=\"http://i.imdb.com/images/p3p.xml\",CP=\"CAO DSP LAW CUR ADM IVAo IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA HEA PRE LOC GOV OTC \"",
     "transfer-encoding": "chunked"
   },
   "url": "http://www.imdb.com/find?ref_=nv_sr_fn&q=nemo&s=all",
-  "time": 1031,
+  "time": 297,
   "request": {}
 }

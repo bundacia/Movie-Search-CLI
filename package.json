@@ -4,12 +4,17 @@
   "description": "",
   "main": "imdb.js",
   "scripts": {
-    "test": "VCR_MODE=playback mocha",
-    "test:record": "VCR_MODE=record mocha"
+    "test": "VCR_MODE=playback mocha --compilers js:babel-register src/test",
+    "test:record": "VCR_MODE=record mocha --compilers js:babel-register src/test",
+    "build": "babel src -d lib",
+    "search": "node lib/imdb.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.24.1",
     "cheerio": "^1.0.0-rc.1"
   },
   "devDependencies": {

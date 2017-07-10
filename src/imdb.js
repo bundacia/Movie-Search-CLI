@@ -18,14 +18,16 @@ function queryIMDB(search, cb) {
 
 function parseResultsPage(html) {
   const $ = cheerio.load(html)
-  const links = $('.result_text')
+  const links = $('.findSection')
+    .first()
+    .find('.result_text')
     .map((i, elm) => $(elm).text())
     .toArray()
   return links
 }
 
 function run() {
-  const search = process.argv[2]
+  const search = encodeURIComponent(process.argv.slice(2).join(' '))
   queryIMDB(search, (err, results) => {
     if (err) throw err
     console.log(results.join('\n'))
