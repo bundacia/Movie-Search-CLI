@@ -1,7 +1,6 @@
-require('sepia')
-const expect = require('chai').expect
-
-const queryIMDB = require('../imdb').queryIMDB
+import 'sepia'
+import {expect} from 'chai'
+import {queryIMDB} from '../imdb'
 
 describe('imdb.js', function () {
   this.timeout(6000)
