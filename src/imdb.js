@@ -1,11 +1,11 @@
-const http = require('http')
-const cheerio = require('cheerio')
+import http from 'http'
+import cheerio from 'cheerio'
 
-function queryIMDB(search, cb) {
+export function queryIMDB(search, cb) {
   http.get({
     hostname: 'www.imdb.com',
     path: `/find?ref_=nv_sr_fn&q=${search}&s=all`,
-  }, (res) => {
+  }, res => {
     var html = ''
     res.on('data', (chunk) => { html += chunk; });
     res.on('end', () => {
@@ -36,8 +36,4 @@ function run() {
 
 if (!module.parent) {
   run()
-}
-
-module.exports = {
-  queryIMDB
 }
