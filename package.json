@@ -4,8 +4,7 @@
   "description": "",
   "main": "imdb.js",
   "scripts": {
-    "test": "VCR_MODE=playback mocha --compilers js:babel-register src/test",
-    "test:record": "VCR_MODE=record mocha --compilers js:babel-register src/test",
+    "test": "mocha --compilers js:babel-register src/test",
     "build": "babel src -d lib",
     "search": "node lib/imdb.js"
   },
@@ -20,7 +19,6 @@
   "devDependencies": {
     "chai": "^4.0.2",
     "mocha": "^3.4.2",
-    "sepia": "^2.0.2"
   },
   "babel": {
     "presets": ["env"]
