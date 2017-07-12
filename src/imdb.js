@@ -1,10 +1,16 @@
 import http from 'http'
+import {stringify} from 'querystring'
 import cheerio from 'cheerio'
 
 export function queryIMDB(search, cb) {
+  const querystring = stringify({
+    "ref_": "nv_sr_fn",
+    q: search,
+    s: "all",
+  })
   http.get({
     hostname: 'www.imdb.com',
-    path: `/find?ref_=nv_sr_fn&q=${search}&s=all`,
+    path: `/find?${querystring}`,
   }, res => {
     var html = ''
     res.on('data', (chunk) => { html += chunk; });
@@ -27,7 +33,7 @@ function parseResultsPage(html) {
 }
 
 function run() {
-  const search = encodeURIComponent(process.argv.slice(2).join(' '))
+  const search = process.argv.slice(2).join(' ')
   queryIMDB(search, (err, results) => {
     if (err) throw err
     console.log(results.join('\n'))
