@@ -1,8 +1,11 @@
-import 'sepia'
+import replayer from 'replayer'
 import {expect} from 'chai'
 import {queryIMDB, parseResultsPage} from '../imdb'
 
 describe('queryIMDB', function () {
+  // Increase timeout when recording in case imdb.com is slow
+  if (process.env.VCR_MODE === 'record') { this.timeout(10000) }
+
   it('can find nemo!', function (done) {
     queryIMDB('finding nemo', (err, results) => {
       expect(err).to.be.null
