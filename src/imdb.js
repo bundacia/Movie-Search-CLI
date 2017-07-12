@@ -22,7 +22,7 @@ export function queryIMDB(search, cb) {
   .on('error', cb)
 }
 
-function parseResultsPage(html) {
+export function parseResultsPage(html) {
   const $ = cheerio.load(html)
   const links = $('.findSection')
     .first()

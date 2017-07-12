@@ -1,8 +1,8 @@
 import 'sepia'
 import {expect} from 'chai'
-import {queryIMDB} from '../imdb'
+import {queryIMDB, parseResultsPage} from '../imdb'
 
-describe('imdb.js', function () {
+describe('queryIMDB', function () {
   it('can find nemo!', function (done) {
     queryIMDB('finding nemo', (err, results) => {
       expect(err).to.be.null
@@ -18,5 +18,25 @@ describe('imdb.js', function () {
       expect(results).to.deep.eq([])
       done()
     })
+  })
+})
+
+describe('parseResultsPage', function () {
+  it('parses the results page', function (done) {
+    const resultsHTML = `
+    <div class='findSection'>
+      <table class="findList">
+        <tr> <td class="result_text">Rocky</td> </tr>
+        <tr> <td class="result_text">Rocky II</td> </tr>
+      </table>
+    </div>
+    `
+    const movieList = parseResultsPage(resultsHTML)
+
+    expect(movieList).to.deep.eq([
+      'Rocky',
+      'Rocky II',
+    ])
+    done()
   })
 })
