@@ -41,7 +41,7 @@ describe('queryIMDB', function () {
   })
 
   afterEach(function() {
-    nock.restore()
+    nock.cleanAll()
   })
 })
 
@@ -62,5 +62,9 @@ describe('parseResultsPage', function () {
       'Rocky II',
     ])
     done()
+  })
+
+  afterEach(function() {
+    nock.cleanAll()
   })
 })
